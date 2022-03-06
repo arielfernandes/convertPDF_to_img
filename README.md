@@ -1,13 +1,20 @@
 # convertPDF_to_img (PNG)
+```console
+user@user:~$ main.py -h
 
+usage: main.py [-h] -f FILE [-b BEGIN] [-e END] command
 
-usage: main.py [-h] -f FILE [-b BEGIN] [-e END] command</br>
-
-positional arguments:</br>
+positional arguments:
   command</br>
 
-options:</br>
-  -h, --help            show this help message and exit</br>
-  -f FILE, --file FILE  The filename</br>
-  -b BEGIN, --begin BEGIN Initial page</br>
-  -e END, --end END     Final page</br>
+options:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  The filename
+  -b BEGIN, --begin BEGIN Initial page
+  -e END, --end END     Final page
+
+```
+#Exemple to use
+```console
+user@user:~$ main.py convert -f "name_file.pdf" -b 2 -e 20
+```
