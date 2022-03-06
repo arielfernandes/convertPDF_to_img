@@ -5,15 +5,15 @@ import os
 class ConvertFile:
 
     # default constructor
-    def __init__(self, file_name, type_file, file_start=0, file_end=0):
+    def __init__(self, file_name, file_start=0, file_end=0):
         self.file_name = file_name
-        self.type_file = type_file
+#         self.type_file = type_file
         self.file_start = file_start
         self.file_end = file_end
 
     # a method for printing data members
     def print_args(self):
-        print(self.file_name, self.type_file, self.file_start, self.file_end)
+        print(self.file_name, self.file_start, self.file_end)
 
     # a method for open pdf
     def open_file(self):
@@ -34,7 +34,7 @@ class ConvertFile:
         page_start = self.file_start
         page_end = self.file_end
         matriz = fitz.Matrix(10, 10)
-        if(page_start != 0 and page_end):
+        if(page_start == 1 and page_end):
             page_start -= 1
         for p in range(page_start, page_end):
             p = doc.loadPage(p)
@@ -45,5 +45,4 @@ class ConvertFile:
 if __name__ == '__main__':
     pdf = 'como_programar_cpp.pdf'
 
-    obg = ConvertFile(pdf, 'jpg', 1, 16)
     obg.convert_pdf()
