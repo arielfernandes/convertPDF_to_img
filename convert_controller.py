@@ -15,6 +15,7 @@ class ConvertFile:
     def print_args(self):
         print(self.file_name, self.type_file, self.file_start, self.file_end)
 
+    # a method for open pdf
     def open_file(self):
         if not self.file_name:
             doc = get_filename()
